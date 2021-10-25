@@ -3,6 +3,9 @@
     cursor: pointer;
     padding: 1.7rem;
     transition: .3s;
+    display: flex;
+    position: relative;
+    font-size: 0.8rem;
 
     & span{
         font-size: 0.9rem;
@@ -11,5 +14,17 @@
 
     &:hover{
         background-color: rgb(56, 56, 56);
+    }
+
+    .movie-star{
+        @include flex-center;
+        font-size:1.3rem;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    @include for-tablet{
+        font-size: 1rem;
     }
 }

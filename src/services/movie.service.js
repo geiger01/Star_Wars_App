@@ -6,7 +6,8 @@ const MOVIE_KEY = 'movies'
 const FAV_MOVIES_KEY = 'favourites'
 
 export const movieService={
-    getMovies
+    getMovies,
+    toggleFavMovie
 }
 
 async function getMovies(){
@@ -23,4 +24,17 @@ async function getMovies(){
     }catch(err){
         console.log(err);
     }
+}
+
+function toggleFavMovie(episodeId){
+    console.log(episodeId);
+    const favMovies = storageService.loadFromStorage(FAV_MOVIES_KEY) || {}
+
+    if (favMovies[episodeId]){
+        delete favMovies[episodeId]
+    }else{
+        favMovies[episodeId]= true
+    }
+    storageService.saveToStorage(FAV_MOVIES_KEY, favMovies)
+    return favMovies
 }

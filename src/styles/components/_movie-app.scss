@@ -6,11 +6,18 @@
 
 
     .movie-content-container{
-        width: 80%;
-        min-height: 90vh;
+        width: 100%;
+        min-height: 100vh;
         background-color: rgb(38, 38, 38);
-        border-radius: 12px;
 
         display: flex;
+
+        @include for-tablet{
+            width: 80%;
+            min-height: 90vh;
+            border-radius: 12px;
+        }
     }
+
+  
 }
