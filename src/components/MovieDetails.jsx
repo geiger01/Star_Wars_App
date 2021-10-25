@@ -18,6 +18,7 @@ export const MovieDetails = ({movie,onToggleNav,isOpen,exitScreen}) => {
             <h4>Director: {movie.director}</h4>
             <h4>Producer: {movie.producer}</h4>
             <h4>Release Date: {movie.release_date.split('-')[0]}</h4>
+            <p>{movie.opening_crawl}</p>
         <div className="movie-img"></div>
 
         <Screen exitScreen={exitScreen} isOpen={isOpen}/>

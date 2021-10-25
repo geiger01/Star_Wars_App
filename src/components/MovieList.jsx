@@ -7,7 +7,7 @@ export const MovieList = ({movies,onSetCurrMovie,onToggleFav,favMovies,isNavOpen
             <div className="movie-list-title">
                 <h2>Our Movies</h2>
             </div>
-            {movies && movies.map((movie)=> <MoviePreview onToggleFav={onToggleFav} movie={movie} key={movie.episode_id} onSetCurrMovie={onSetCurrMovie} favMovies={favMovies}/>)}
+            {movies && movies.map((movie)=> <MoviePreview  onToggleFav={onToggleFav} movie={movie} key={movie.episode_id} onSetCurrMovie={onSetCurrMovie} favMovies={favMovies}/>)}
         </div>
     )
 }
