@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { MovieDetails } from '../components/MovieDetails'
 import { MovieList } from '../components/MovieList'
+import { Screen } from '../components/Screen'
 import { movieService } from '../services/movie.service'
 import { storageService } from '../services/storage.service'
 
@@ -34,8 +35,8 @@ export const MovieApp = () => {
     setFavMovies(favMovies)
    }
 
-   const onToggleNav=()=>{
-    setIsNavOpen(!isNavOpen)
+   const onToggleNav=(boolean)=>{
+    setIsNavOpen(boolean)
 }
 
     return (
@@ -43,8 +44,11 @@ export const MovieApp = () => {
             <div className="movie-content-container">
                
                 <MovieList isNavOpen={isNavOpen} onToggleFav={onToggleFav} movies={movies} onSetCurrMovie={onSetCurrMovie} favMovies={favMovies}/>
-                <MovieDetails movie={currMovie} onToggleNav={onToggleNav} isOpen={isNavOpen} exitScreen={setIsNavOpen}/>
+                <MovieDetails movie={currMovie} onToggleNav={onToggleNav} />
             </div>
+
+        <Screen exitScreen={setIsNavOpen} isOpen={isNavOpen}/>
+
         </main>
     )
 }

@@ -3,14 +3,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { Screen } from './Screen';
 
 
-export const MovieDetails = ({movie,onToggleNav,isOpen,exitScreen}) => {
+export const MovieDetails = ({movie,onToggleNav}) => {
 
 
  
     if (!movie) return <div>Loading</div>
     return (
         <div className="movie-details">
-            <div onClick={onToggleNav} className="menu-hamburger">
+            <div onClick={()=>onToggleNav(true)} className="menu-hamburger">
                 <GiHamburgerMenu/>
             </div>
 
@@ -21,7 +21,6 @@ export const MovieDetails = ({movie,onToggleNav,isOpen,exitScreen}) => {
             <p>{movie.opening_crawl}</p>
         <div className="movie-img"></div>
 
-        <Screen exitScreen={exitScreen} isOpen={isOpen}/>
         </div>
     )
 }
