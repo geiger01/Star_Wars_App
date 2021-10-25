@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MovieDetails = () => {
+export const MovieDetails = ({movie, onToggleFav}) => {
     return (
         <div>
             

@@ -1,3 +1,16 @@
 .movie-app{
+    width: 100%;
+    min-height: 100vh;
     color: $main-light-color;
+    @include flex-center;
+
+
+    .movie-content-container{
+        width: 80%;
+        min-height: 90vh;
+        background-color: rgb(38, 38, 38);
+        border-radius: 12px;
+
+        display: flex;
+    }
 }

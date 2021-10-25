@@ -1,0 +1,18 @@
+.movie-list{
+
+    min-height: 100%;
+    width: 20rem;
+    background-color: #2d2d2d;
+    border-radius: 12px 0 0 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    .movie-list-title{
+        @include flex-center;
+        padding:1rem;
+        background-color: rgb(53, 53, 53);
+        border-radius: 12px 0 0 0 ;
+    }
+
+}

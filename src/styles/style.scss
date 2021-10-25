@@ -6,7 +6,8 @@
 
 //Basics
 @import "basics/base";
-@import "basics/layout";
 
 // Components
-@import "components/movie-app"
+@import "components/movie-app";
+@import "components/movie-list";
+@import "components/movie-preview";
