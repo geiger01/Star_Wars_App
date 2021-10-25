@@ -7,10 +7,14 @@ export const MoviePreview = ({movie,onSetCurrMovie,onToggleFav,favMovies}) => {
         <div onClick={()=>onSetCurrMovie(movie)} className="movie-preview">
             <h3>{movie.title} <span> ({movie.release_date.split('-')[0]})</span></h3>
             <div onClick={(e)=>onToggleFav(e,movie.episode_id)} className="movie-star">
-            {favMovies[movie.episode_id] ? 
-            <AiOutlineStar /> :
-            <AiFillStar /> 
-        }
+            {favMovies &&
+            <>
+            {favMovies[movie.episode_id]? 
+                <AiFillStar /> :
+                <AiOutlineStar /> 
+            }
+            </>
+            }
             </div>
         </div>
     )

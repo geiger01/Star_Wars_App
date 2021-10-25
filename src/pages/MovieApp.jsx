@@ -8,7 +8,7 @@ export const MovieApp = () => {
 
    const [movies, setMovies] = useState([])
    const [currMovie, setCurrMovie] = useState(null)
-   const [favMovies, setFavMovies] = useState([])
+   const [favMovies, setFavMovies] = useState(null)
    const [isNavOpen, setIsNavOpen] = useState(false)
 
 
@@ -17,7 +17,7 @@ export const MovieApp = () => {
             const movies = await movieService.getMovies()
             setMovies(movies)
             setCurrMovie(movies[0])
-            setFavMovies(storageService.loadFromStorage('favourites'))
+            setFavMovies(storageService.loadFromStorage('favourites') || {})
     }
     loadMovies()
 

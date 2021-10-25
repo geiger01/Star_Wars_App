@@ -27,7 +27,7 @@ async function getMovies(){
 }
 
 function toggleFavMovie(episodeId){
-    console.log(episodeId);
+    
     const favMovies = storageService.loadFromStorage(FAV_MOVIES_KEY) || {}
 
     if (favMovies[episodeId]){
