@@ -12,13 +12,14 @@ export const MovieApp = () => {
        const loadMovies=async ()=>{
             const movies = await movieService.getMovies()
             setMovies(movies)
+            setCurrMovie(movies[0])
     }
     loadMovies()
 
    }, [])
 
    const onSetCurrMovie=(movie)=>{
-        console.log(movie);
+  
         setCurrMovie(movie)
    }
 
